@@ -1,0 +1,87 @@
+body {
+  margin: 0;
+}
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+  text-align: center;
+}
+
+.slider {
+  margin-top: 60px;
+  width: 600px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.button-slider {
+  height: 52px;
+  min-width: 52px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  letter-spacing: 0;
+  color: hsl(0, 0%, 16%);
+  border-radius: 100px;
+  border: 2px solid hsl(25, 69%, 82%);
+  transition: 0.5s;
+  background: transparent;
+}
+
+.button-slider:hover {
+  background: hsl(25, 93%, 88%);
+  border-color: hsl(25, 93%, 88%);
+}
+
+.slider-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.slider-window {
+  width: 400px;
+  overflow: hidden;
+}
+
+.slider-line {
+  display: flex;
+}
+
+.slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 400px;
+  height: 200px;
+  font-size: 32px;
+  color: hsl(0, 47%, 54%);
+  background-color: hsl(25, 100%, 93%);
+  border-radius: 6px;
+}
+
+.dot-wrapper {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.dot {
+  margin: 5px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: hsl(25, 100%, 93%);
+  transition: .4s;
+}
+
+.dot:hover {
+  background: hsl(25, 62%, 51%);
+}
+
+.dot.active {
+  background: hsl(25, 62%, 51%);
+}

@@ -1,11 +1,3 @@
-/* eslint-disable import/extensions */
-import { get } from './storage.js';
-import Keyboard from './Keyboard.js';
-
-// const lang = get('kbLang', '"ru"');
-
-// new Keyboard(rowsOrder).init(lang).generateLayout();
-
 const slidesQuantity = 5;
 const buttonPrev = document.querySelector('.prev');
 const buttonNext = document.querySelector('.next');
@@ -29,6 +21,7 @@ function init(slidesQuantity) {
 }
 
 init(slidesQuantity);
+const sliderLineContent = sliderLine.innerHTML;
 
 function dotActivation() {
   dots.forEach((el) => {
@@ -73,28 +66,37 @@ function jumpToSlide() {
   }
 }
 
-function goToNextSlide() {
+function goToNextSlide(clone = false) {
   buttonNext.disabled = true;
   let count = 0;
+  const targetSlide = slideNumber;
   let timer = setInterval(function () {
     if (count >= 1) {
       buttonNext.disabled = false;
+      if (clone) {
+        sliderLine.style.transform = `translate(0px)`;
+        sliderLine.innerHTML = sliderLineContent;
+      }
       clearInterval(timer);
       return;
     }
     count += 0.02;
     sliderLine.style.transform = `translate(${
-      -(slideNumber + count - 1) * 400
+      -(targetSlide + count - 1) * 400
     }px)`;
   }, 20);
 }
 
-function goToPrevSlide() {
+function goToPrevSlide(clone = false) {
   buttonPrev.disabled = true;
   let count = 1;
   let timer = setInterval(function () {
     if (count <= 0) {
       buttonPrev.disabled = false;
+      if (clone) {
+        sliderLine.style.transform = `translate(${-(slideNumber + count) * 400}px)`;
+        sliderLine.innerHTML = sliderLineContent;
+      }
       clearInterval(timer);
       return;
     }
@@ -103,22 +105,41 @@ function goToPrevSlide() {
   }, 20);
 }
 
+function cloneNextSlide() {
+  const newSlide = document.createElement('div');
+  newSlide.classList.add('slide');
+  newSlide.innerHTML = document.querySelectorAll('.slide')[0].innerHTML;
+  sliderLine.append(newSlide);
+  goToNextSlide(true);
+}
+
+function clonePrevSlide() {
+  const newSlide = document.createElement('div');
+  newSlide.classList.add('slide');
+  newSlide.innerHTML = document.querySelectorAll('.slide')[0].innerHTML;
+  sliderLine.append(newSlide);
+  sliderLine.style.transform = `translate(${-slidesQuantity * 400}px)`;
+  goToPrevSlide(true);
+}
+
 buttonNext.addEventListener('click', () => {
   slideNumber++;
   if (slideNumber > slidesQuantity - 1) {
+    cloneNextSlide();
     slideNumber = 0;
+  } else {
+    goToNextSlide();
   }
-
-  goToNextSlide();
   dotActivation();
 });
 
 buttonPrev.addEventListener('click', () => {
   slideNumber--;
   if (slideNumber < 0) {
+    clonePrevSlide();
     slideNumber = slidesQuantity - 1;
+  } else {
+    goToPrevSlide();
   }
-
-  goToPrevSlide();
   dotActivation();
 });
