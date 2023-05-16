@@ -49,6 +49,7 @@ h1 {
 
 .slider-line {
   display: flex;
+  column-gap: 10px;
 }
 
 .slide {
