@@ -1,4 +1,4 @@
-const slidesQuantity = 5;
+const slidesQuantity = 10;
 const buttonPrev = document.querySelector('.prev');
 const buttonNext = document.querySelector('.next');
 
@@ -46,17 +46,18 @@ function jumpToSlide() {
   const step = Math.abs(prevNumber - slideNumber) / 50;
   if (prevNumber < slideNumber) {
     let timer = setInterval(function () {
-      if (count >= slideNumber) {
+      count += step;
+      if (count > slideNumber) {
+        sliderLine.style.transform = `translate(${-slideNumber * (400 + 10)}px)`;
         clearInterval(timer);
         return;
       }
-      count += step;
-
       sliderLine.style.transform = `translate(${-count * (400 + 10)}px)`;
     }, 20);
   } else {
     let timer = setInterval(function () {
       if (count <= slideNumber) {
+        sliderLine.style.transform = `translate(${-slideNumber * (400 + 10)}px)`;
         clearInterval(timer);
         return;
       }
