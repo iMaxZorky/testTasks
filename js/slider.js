@@ -130,7 +130,7 @@ class Keyboard {
     let count = this.prevNumber;
     const step = Math.abs(this.prevNumber - this.slideNumber) / 50;
     if (this.prevNumber < this.slideNumber) {
-      let timer = setInterval(function () {
+      let timer = setInterval(() => {
         count += step;
         if (count > this.slideNumber) {
           this.sliderLine.style.transform = `translate(${-this.slideNumber * (400 + 10)}px)`;
@@ -140,7 +140,7 @@ class Keyboard {
         this.sliderLine.style.transform = `translate(${-count * (400 + 10)}px)`;
       }, 20);
     } else {
-      let timer = setInterval(function () {
+      let timer = setInterval(() => {
         if (count <= this.slideNumber) {
           this.sliderLine.style.transform = `translate(${-this.slideNumber * (400 + 10)}px)`;
           clearInterval(timer);
