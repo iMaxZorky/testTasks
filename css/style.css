@@ -318,7 +318,7 @@ html {
 }
 
 .header__login-link {
-    position: relative;
+  position: relative;
   font-size: 18px;
   text-decoration: none;
 }
@@ -394,7 +394,7 @@ p {
   max-width: 1440px;
   margin: 0 auto;
   padding: 0;
-  
+
 }
 
 @media (max-width: 800px) {
@@ -598,21 +598,20 @@ p {
 
 .our-mission {
   padding: 150px 255px;
-  height: 800px;
-    position: relative;
+  position: relative;
 }
 
 .our-mission__phone-image {
   position: absolute;
-    top: 0;
-    right: 50%;
-    transform: rotate(90deg) translate(-43%);
+  top: 0;
+  right: 50%;
+  transform: rotate(90deg) translate(-43%);
 }
 
 .our-mission__text-block {
   width: 320px;
   margin-left: auto;
-  
+
   position: relative;
 
   z-index: 0;
@@ -643,4 +642,27 @@ p {
   background: #F101BF;
   opacity: 0.7;
   filter: blur(50px);
+}
+
+.id-scanner {
+  background: linear-gradient(180deg, #000000 -3%, rgba(0, 0, 0, 0) 56%, #000000 84%), url("../assets/webp/background-scanner.webp");
+  background-size: cover;
+}
+
+.id-scanner__container {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.id-scanner__text-block {
+  max-width: 410px;
+}
+
+.id-scanner__title {
+  margin-bottom: 20px;
+
+  font-family: 'Montserrat', sans-serif;
+  font-size: 50px;
 }
