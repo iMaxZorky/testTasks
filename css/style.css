@@ -49,6 +49,10 @@ body {
   margin: 0;
 }
 
+html, body {
+  overflow-x: hidden;
+}
+
 a {
   background: transparent;
 }
@@ -651,6 +655,7 @@ p {
 
 .id-scanner__container {
   margin: 0 auto;
+  padding-top: 200px;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
@@ -665,4 +670,73 @@ p {
 
   font-family: 'Montserrat', sans-serif;
   font-size: 50px;
+}
+
+.bi-tool__wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.bi-tool__text-block {
+  max-width: 497px;
+}
+
+.bi-tool__title {
+  font-size: 51px;
+}
+
+.bi-tool__text {
+  max-width: 395px;
+
+  font-size: 18px;
+}
+
+.bi-tool__tool-container{
+  width: 703px;
+  height: 522px;
+  /* display: flex;
+  flex-direction: column;
+  flex-wrap: wrap; */
+  position: relative;
+}
+
+.tool1 {
+  position: absolute;
+  left: 116px;
+  top: 184px;
+}
+
+.tool2 {
+  position: absolute;
+  right: 135px;
+}
+
+.tool3 {
+  position: absolute;
+  bottom: 135px;
+  right: 80px;
+}
+
+.tool4 {
+  position: absolute;
+  bottom: 145px;
+  left: 0;
+}
+
+.tool5 {
+  position: absolute;
+  bottom: 10px;
+  left: 175px;
+}
+
+.tool6 {
+  position: absolute;
+  bottom: 110px;
+  left: 262px;
+}
+
+.tool7 {
+  position: absolute;
+  right: 0;
+  bottom: 0;
 }
