@@ -49,7 +49,8 @@ body {
   margin: 0;
 }
 
-html, body {
+html,
+body {
   overflow-x: hidden;
 }
 
@@ -73,7 +74,8 @@ h1 {
 }
 
 h2 {
-  font-size: 1.5em;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 51px;
   margin: 0.83em 0;
 }
 
@@ -257,8 +259,19 @@ input[type=radio] {
 }
 
 @font-face {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Montserrat";
   src: url("../assets/fonts/montserrat.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Manrope", sans-serif;
+  src: url("../assets/fonts/Manrope-Bold.woff") format("woff");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../assets/fonts/roboto-medium.woff") format("woff");
   font-style: normal;
 }
 
@@ -389,7 +402,7 @@ p {
   font-family: 'Noto Sans';
   font-style: normal;
   font-weight: 400;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 27px;
 }
 
@@ -498,6 +511,8 @@ p {
   position: relative;
   padding-left: 130px;
   width: 380px;
+
+  font-weight: 20px;
 
   z-index: 0;
 }
@@ -623,13 +638,7 @@ p {
 
 .our-mission__title {
   margin-bottom: 30px;
-  font-size: 51px;
   letter-spacing: 1px;
-}
-
-.our-mission__text {
-  font-size: 18px;
-  /* line-height: 25px; */
 }
 
 .our-mission__text-block::after {
@@ -667,9 +676,10 @@ p {
 
 .id-scanner__title {
   margin-bottom: 20px;
+}
 
-  font-family: 'Montserrat', sans-serif;
-  font-size: 50px;
+.id-scanner__text {
+  max-width: 316px;
 }
 
 .bi-tool__wrapper {
@@ -681,17 +691,18 @@ p {
 .bi-tool__wrapper::before {
   content: '';
   position: absolute;
-  top: 7px;
-  left: 55px;
+  top: -82px;
+  left: -208px;
 
   z-index: 0;
 
-  width: 85px;
-  height: 85px;
+  width: 426px;
+  height: 437px;
 
-  background: #F101BF;
-  opacity: 0.7;
-  filter: blur(50px);
+  background: linear-gradient(12.08deg, #F101BF 2.82%, #0066FF 97.06%);
+  opacity: 0.1;
+  filter: blur(125px);
+  transform: rotate(5.78deg);
 }
 
 .bi-tool__text-block {
@@ -699,17 +710,11 @@ p {
   z-index: 1;
 }
 
-.bi-tool__title {
-  font-size: 51px;
-}
-
 .bi-tool__text {
   max-width: 395px;
-
-  font-size: 18px;
 }
 
-.bi-tool__tool-container{
+.bi-tool__tool-container {
   width: 703px;
   height: 522px;
   /* display: flex;
@@ -780,9 +785,11 @@ p {
 
 .qr-code__title {
   margin-bottom: 20px;
-
-  font-family: 'Montserrat', sans-serif;
   font-size: 50px;
+}
+
+.qr-code__text {
+  max-width: 315px;
 }
 
 .qr-scan {
@@ -803,10 +810,11 @@ p {
   width: 100%;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .qr-scan__text {
-  max-width: 300px;
+  max-width: 292px;
 }
 
 .qr-scan__phone-image {
@@ -816,27 +824,25 @@ p {
 }
 
 .qr-scan__phone-image::after {
+  z-index: -1;
   content: '';
   position: absolute;
-  top: 0;
-  left: 0;
-  transform: translate(-25%, 0);
+  width: 1022.45px;
+  height: 952.07px;
+  right: -108%;
+  bottom: -21%;
 
-  z-index: -1;
-
-  width: 585px;
-  height: 585px;
-  border-radius: 50%;
-
-  background: #F101BF;
-  opacity: 0.3;
-  filter: blur(50px);
+  background: linear-gradient(12.08deg, #F101BF 2.82%, #0066FF 97.06%);
+  opacity: 0.15;
+  filter: blur(155.784px);
+  border-radius: 476.034px;
+  transform: rotate(-0.55deg);
 }
 
 .qr-scan__phone-image::before {
   content: 'Scan QR-code';
   position: absolute;
-  padding: 60px 0 0 100px;
+  padding: 80px 0 0 75px;
   top: 50%;
   left: 455px;
 
@@ -846,4 +852,70 @@ p {
   background: url(../assets/svg/arrow-curve.svg);
   background-repeat: no-repeat;
   background-position: left top;
+}
+
+.advantages__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.advantages__text-block {
+  align-self: flex-end;
+}
+
+.advantages__benefits-block {
+  height: 1000px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.advantages__benefits-block::after {
+  content: '';
+  position: absolute;
+  width: 286.92px;
+  height: 267.17px;
+  left: 300%;
+  bottom: 25%;
+
+  background: linear-gradient(12.08deg, #F101BF 2.82%, #0066FF 97.06%);
+opacity: 0.2;
+filter: blur(125px);
+transform: rotate(5.78deg);
+}
+
+.advantages__phone-image {
+  position: absolute;
+}
+
+.advantages__benefit {
+  padding: 19px 24px 21px 23px;
+
+  font-family: 'Roboto';
+  font-size: 22.8px;
+  line-height: 26.72px;
+
+  z-index: 1;
+
+  background: #000000;
+  border: 0.76007px solid rgba(255, 255, 255, 0.5);
+  border-radius: 18.2417px;
+}
+
+.benefit1 {
+
+}
+
+.benefit2 {
+
+}
+
+.benefit3 {
+
+}
+
+.benefit4 {
+
 }
