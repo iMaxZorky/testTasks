@@ -567,7 +567,9 @@ p {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
 
+.start-screen__downloads {
   padding: 0 163px 0 100px;
 }
 
@@ -881,9 +883,9 @@ p {
   bottom: 25%;
 
   background: linear-gradient(12.08deg, #F101BF 2.82%, #0066FF 97.06%);
-opacity: 0.2;
-filter: blur(125px);
-transform: rotate(5.78deg);
+  opacity: 0.2;
+  filter: blur(125px);
+  transform: rotate(5.78deg);
 }
 
 .advantages__phone-image {
@@ -904,18 +906,134 @@ transform: rotate(5.78deg);
   border-radius: 18.2417px;
 }
 
-.benefit1 {
+.benefit1 {}
 
+.benefit2 {}
+
+.benefit3 {}
+
+.benefit4 {}
+
+.notab-space__wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
 }
 
-.benefit2 {
+.notab-space__wrapper::after {
+  content: '';
+  position: absolute;
+  top: 35%;
+  left: 35%;
 
+  width: 60%;
+  height: 45%;
+
+  background: url(../assets/webp/phone-notab.webp);
+  background-repeat: no-repeat;
+  background-position: top;
 }
 
-.benefit3 {
-
+.notab-space__background-text {
+  font-family: "Manrope", sans-serif;
+  font-size: 210px;
+  line-height: 191px;
+  color: rgb(0, 0, 0);
+  text-shadow: 0px 0px 0px #ebe3e3;
 }
 
-.benefit4 {
+.notab-space__background {
+  position: relative;
+}
 
+.notab-space__background::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(360deg, #000000 6.8%, rgba(0, 0, 0, 0) 51.62%, #000000 97.38%);
+  background-size: cover;
+}
+
+
+.in-touch__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  position: relative;
+}
+
+.in-touch__wrapper::before {
+  content: '';
+  position: absolute;
+  width: 247.04px;
+  height: 250.45px;
+  top: 1%;
+  left: 1%;
+
+  background: linear-gradient(12.08deg, #F101BF 2.82%, #0066FF 97.06%);
+  opacity: 0.3;
+  filter: blur(125px);
+  transform: rotate(5.78deg);
+}
+
+.in-touch__wrapper::after {
+  content: '';
+  position: absolute;
+  width: 336.78px;
+  height: 341.42px;
+
+  bottom: 1%;
+  right: 1%;
+
+  background: linear-gradient(12.08deg, #F101BF 2.82%, #0066FF 97.06%);
+  opacity: 0.3;
+  filter: blur(125px);
+  transform: rotate(5.78deg);
+}
+
+.in-touch__title {
+  text-align: center;
+}
+
+.in-touch__text {
+  text-align: center;
+  line-height: 25px;
+}
+
+.in-touch__downloads {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 33px;
+}
+
+.in-touch__downloads-text {
+  font-size: 24px;
+}
+
+.in-touch__downloads-links {
+  gap: 59px;
+}
+
+.feedback-form__button {
+  height: 80px;
+  min-width: 398px;
+
+  font-family: "Montserrat", sans-serif;
+  font-size: 24px;
+  color: hsla(0, 0%, 100%, 1);
+
+  background: #000000;
+  border: 1px solid #FFFFFF;
+  border-radius: 10px;
+
+  transition: 0.5s;
+}
+
+.feedback-form__button:hover {
+  text-shadow: 0 0 40px #FFFFFF;
+  box-shadow: 0 0 27px rgb(255, 255, 255);
 }
