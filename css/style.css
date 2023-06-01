@@ -275,6 +275,12 @@ input[type=radio] {
   font-style: normal;
 }
 
+@font-face {
+  font-family: "Avenir";
+  src: url("../assets/fonts/avenir-medium.woff") format("woff");
+  font-style: normal;
+}
+
 body {
   background-color: #000;
   color: white;
@@ -986,8 +992,8 @@ p {
   width: 336.78px;
   height: 341.42px;
 
-  bottom: 1%;
-  right: 1%;
+  bottom: 4%;
+  right: -54%;
 
   background: linear-gradient(12.08deg, #F101BF 2.82%, #0066FF 97.06%);
   opacity: 0.3;
@@ -999,28 +1005,20 @@ p {
   text-align: center;
 }
 
+.in-touch__text-block {
+  z-index: 1;
+}
+
 .in-touch__text {
   text-align: center;
   line-height: 25px;
 }
 
-.in-touch__downloads {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  row-gap: 33px;
-}
 
-.in-touch__downloads-text {
-  font-size: 24px;
-}
-
-.in-touch__downloads-links {
-  gap: 59px;
-}
 
 /* ---------------------------------------------- */
 .feedback-form {
+  margin-top: 82px;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -1052,7 +1050,8 @@ p {
 
 .input-venue-city,
 .input-state-city {
-  flex-basis: 48%;
+  flex-basis: 40%;
+  flex-grow: 1;
 }
 
 .input-message {
@@ -1063,7 +1062,7 @@ p {
 .feedback-form__button {
   height: 80px;
   min-width: 398px;
-  margin: 0 auto;
+  margin: 33px auto;
   font-family: "Montserrat", sans-serif;
   font-size: 24px;
   color: hsla(0, 0%, 100%, 1);
@@ -1106,20 +1105,48 @@ p {
 }
 
 .footer__downloads {
-  margin-bottom: 125px;
+  display: flex;
   flex-direction: column;
-  gap: 30px;
+  align-items: center;
+  row-gap: 33px;
+}
+
+.footer__downloads-text {
+  font-size: 24px;
+}
+
+.footer__downloads-links {
+  gap: 59px;
 }
 
 .footer__block {
   font-family: "Avenir", sans-serif;
-  font-weight: 900;
+  font-weight: 800;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.footer__contacts {}
+.footer__contacts {
+  z-index: 1;
+}
+
+.footer__contact {
+  font-family: "Avenir";
+  width: 171px;
+}
+
+.footer__contact > a {
+  font-family: "Avenir";
+  font-size: 18px;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.footer__copy {
+  font-family: "Avenir";
+  font-weight: 800;
+}
 
 .footer__links {
   display: flex;
@@ -1128,6 +1155,7 @@ p {
 }
 
 .footer__link {
+  font-size: 18px;
   text-decoration: none;
 }
 
