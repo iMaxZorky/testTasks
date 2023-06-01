@@ -1186,6 +1186,7 @@ p {
 
 .cookie._show {
   transform: translateY(0%);
+  z-index: 10;
 }
 
 .cookie__wrapper {
@@ -1204,7 +1205,7 @@ p {
 .cookie__button {
   height: 50px;
   min-width: 132px;
-
+  
   font-size: 14px;
   color: hsla(0, 0%, 100%, 1);
   letter-spacing: 0.06em;
@@ -1212,6 +1213,11 @@ p {
   background: rgba(255, 255, 255, 0.1);
   border: 0.5px solid #FFFFFF;
   border-radius: 6px;
+  
+  transition: 0.3s;
+}
 
-  transition: 0.5s;
+.cookie__button:hover {
+  text-shadow: 0 0 40px #FFFFFF;
+  box-shadow: 0 0 8px rgb(255, 255, 255);
 }
