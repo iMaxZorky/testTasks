@@ -604,7 +604,7 @@ p {
 .questions__container {
   width: 503px;
   height: 312px;
-  padding: 0 73px 0 55px;
+  padding: 0 118px 0 55px;
   box-sizing: border-box;
 
   display: flex;
@@ -628,6 +628,10 @@ p {
   position: relative;
 }
 
+.our-mission__wrapper {
+  display: flex;
+}
+
 .our-mission__phone-image {
   position: absolute;
   top: 0;
@@ -636,7 +640,7 @@ p {
 }
 
 .our-mission__text-block {
-  width: 320px;
+  
   margin-left: auto;
 
   position: relative;
@@ -645,8 +649,13 @@ p {
 }
 
 .our-mission__title {
+  width: 335px;
   margin-bottom: 30px;
   letter-spacing: 1px;
+}
+
+.our-mission__text {
+  width: 320px;
 }
 
 .our-mission__text-block::after {
@@ -1161,11 +1170,16 @@ p {
 
 .cookie {
   width: 100%;
+  height: 93px;
   position: fixed;
   bottom: 0;
   left: 0;
 
-  background-color: #c0c0c0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background-color: hsla(218, 22%, 17%, 1);
   transform: translateY(100%);
   transition: .3s;
 }
@@ -1175,20 +1189,29 @@ p {
 }
 
 .cookie__wrapper {
+  width: 100%;
   height: 80px;
+  padding: 0 24px 0 100px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
+.cookie__text {
+  font-size: 14px;
+}
+
 .cookie__button {
-  height: 52px;
-  min-width: 207px;
-  color: hsl(0, 0%, 16%);
-  background: hsl(25, 69%, 82%);
-  border-radius: 100px;
+  height: 50px;
+  min-width: 132px;
+
+  font-size: 14px;
+  color: hsla(0, 0%, 100%, 1);
   letter-spacing: 0.06em;
-  border: 2px solid hsl(25, 69%, 82%);
-  font-size: 17px;
+  
+  background: rgba(255, 255, 255, 0.1);
+  border: 0.5px solid #FFFFFF;
+  border-radius: 6px;
+
   transition: 0.5s;
 }
