@@ -447,7 +447,7 @@ p {
 .start-screen__main-content {
   display: flex;
   align-items: center;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
   min-height: 700px;
   position: relative;
 
@@ -598,7 +598,7 @@ p {
 
 .downloads-links {
   display: flex;
-  gap: 30px;
+  gap: 29px;
 }
 
 .downloads__link {
