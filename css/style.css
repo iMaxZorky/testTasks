@@ -807,6 +807,7 @@ p {
 
 .qr-code__text {
   max-width: 315px;
+  line-height: 25px;
 }
 
 .qr-scan {
@@ -830,9 +831,9 @@ p {
   align-items: center;
 }
 
-.qr-scan__text {
+/* .qr-scan__text {
   max-width: 292px;
-}
+} */
 
 .qr-scan__phone-image {
   position: relative;
@@ -1041,19 +1042,23 @@ p {
   height: 83px;
 
   font-family: "Noto Sans";
-  color: hsla(0, 0%, 75%, 1);
+  color: rgb(0, 0, 0);
 
   box-sizing: border-box;
   border-radius: 10px;
   border: 1px solid #5C5C5C;
 }
 
+.feedback-form__input-field::placeholder {
+  color: hsla(0, 0%, 75%, 1);
+}
+
 .feedback-form__input-field:focus {
   outline: 0;
+  box-shadow: inset 0 0 30px 0.3rem rgb(206, 206, 206);
 }
 
 .feedback-form__input-field._empty {
-  /* box-shadow: inset 0 0 4px 0.1rem rgba(255, 0, 0, 0.863); */
   border: 2px solid #FF0000;
 }
 
