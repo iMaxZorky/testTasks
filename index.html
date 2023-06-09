@@ -7,6 +7,9 @@
     <title>NoTab Landing</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="assets/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
   </head>
   <body>
     <header class="header">
@@ -212,11 +215,11 @@
         <div class="wrapper notab-space__wrapper">
           <div class="notab-space__background">
 
-            <p class="notab-space__background-text">NOTABNOTABNOTAB</p>
-            <p class="notab-space__background-text">NOTABNOTABNOTAB</p>
-            <p class="notab-space__background-text">NOTABNOTABNOTAB</p>
-            <p class="notab-space__background-text">NOTABNOTABNOTAB</p>
-            <p class="notab-space__background-text">NOTABNOTABNOTAB</p>
+            <p class="notab-space__background-text background-text__line-1">NOTABNOTABNOTAB</p>
+            <p class="notab-space__background-text background-text__line-2">NOTABNOTABNOTAB</p>
+            <p class="notab-space__background-text background-text__line-3">NOTABNOTABNOTAB</p>
+            <p class="notab-space__background-text background-text__line-4">NOTABNOTABNOTAB</p>
+            <p class="notab-space__background-text background-text__line-5">NOTABNOTABNOTAB</p>
           </div>
         </div>
       </div>
@@ -235,7 +238,8 @@
             <input class="feedback-form__input-field input-state-city" type="text" id="state" placeholder="State City">
             <input class="feedback-form__input-field input-email" type="email" id="email" placeholder="Email">
             <input class="feedback-form__input-field input-subject _empty" type="text" id="subject" placeholder="Subject">
-            <input class="feedback-form__input-field input-message" type="text" id="message" placeholder="Message">
+            <!-- <input class="feedback-form__input-field input-message" type="text" id="message" placeholder="Message"> -->
+            <textarea name="" cols="30" rows="10" class="feedback-form__input-field input-message" id="message" placeholder="Message"></textarea>
             <button type="submit" class="feedback-form__button">Send</button>
           </form>
         </div>
