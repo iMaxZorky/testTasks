@@ -598,7 +598,7 @@ p {
 
 .downloads-links {
   display: flex;
-  gap: 29px;
+  gap: 26px;
 }
 
 .downloads__link {
@@ -836,7 +836,7 @@ p {
 } */
 
 .qr-code__container {
-  margin: 219px auto;
+  margin: 219px 0 146px 0;
   padding: 0 55px 0 183px;
   height: 1237px;
   position: relative;
@@ -857,7 +857,7 @@ p {
   right: 98px;
 
   width: 135px;
-    height: 74px;
+  height: 74px;
 
   background: url(../assets/svg/inscription-nightlife.svg);
   background-repeat: no-repeat;
@@ -867,7 +867,7 @@ p {
 .qr-code__text-block {
   max-width: 410px;
   align-self: flex-start;
-    margin-top: 500px;
+  margin-top: 500px;
 }
 
 .qr-code__title {
@@ -899,10 +899,15 @@ p {
 }
 
 .qr-scan__text-block {
-  width: 100%;
+  max-width: 1240px;
+  padding: 76px 100px 0 100px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.qr-scan__title {
+  margin: 0;
 }
 
 /* .qr-scan__text {
@@ -910,6 +915,7 @@ p {
 } */
 
 .qr-scan__phone-image {
+  margin: -109px 0 0 20px;
   position: relative;
   align-self: center;
   z-index: 0;
@@ -934,11 +940,14 @@ p {
 .qr-scan__phone-image::before {
   content: 'Scan QR-code';
   position: absolute;
-  padding: 80px 0 0 75px;
-  top: 50%;
-  left: 455px;
+  padding: 85px 0 0 76px;
+  top: 200px;
+  left: 385px;
 
-  width: 110px;
+  font-family: "Montserrat";
+  font-size: 21px;
+
+  width: 160px;
   height: 185px;
 
   background: url(../assets/svg/arrow-curve.svg);
@@ -947,17 +956,29 @@ p {
 }
 
 .advantages__wrapper {
+  padding-top: 150px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 .advantages__text-block {
+  margin-right: 160px;
   align-self: flex-end;
+}
+
+.advantages__title {
+  margin-bottom: 22px;
+}
+
+.advantages__text {
+  padding-left: 5px;
 }
 
 .advantages__benefits-block {
   height: 1000px;
+  width: 952px;
+  padding-left: 87px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -979,6 +1000,7 @@ p {
 }
 
 .advantages__phone-image {
+  margin: 60px auto;
   position: absolute;
 }
 
@@ -996,13 +1018,28 @@ p {
   border-radius: 18.2417px;
 }
 
-.benefit1 {}
+.benefit1 {
+  margin: 205px 184px 0 0;
+  padding: 21px 24px 21px 23px;
+  align-self: flex-end;
+}
 
-.benefit2 {}
+.benefit2 {
+  margin-top: 55px;
+  padding: 29px 37px 29px 25px;
+  align-self: flex-start;
+}
 
-.benefit3 {}
+.benefit3 {
+  margin: 167px 48px 0 0;
+  padding-bottom: 16px;
+}
 
-.benefit4 {}
+.benefit4 {
+  align-self: flex-start;
+    margin-left: 222px;
+    padding-bottom: 19px;
+}
 
 .notab-space__wrapper {
   position: relative;
