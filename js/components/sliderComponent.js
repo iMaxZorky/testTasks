@@ -145,8 +145,8 @@ class Slider {
     let count = 0;
     this.targetSlide = this.slideNumber;
     let timer = setInterval(() => {
-      this.buttonNext.disabled = false;
       if (count >= 1) {
+        this.buttonNext.disabled = false;
         if (clone) {
           this.sliderLine.style.transform = `translate(0px)`;
           this.sliderLine.innerHTML = this.sliderLineContent;
